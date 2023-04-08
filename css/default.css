@@ -8,7 +8,8 @@
 	/* Colors */
 
 	--color-primary-soft-blue: hsl(231, 69%, 60%);
-	--color-primary-soft-red: hsl(0, 80%, 47%);
+	--color-primary-dark-red: hsl(0, 70%, 47%);
+	--color-primary-soft-red: hsl(0, 94%, 66%);
 	--color-neutral-gray-blue: hsl(229, 8%, 48%);
 	--color-neutral-light-gray-blue: hsl(231, 27%, 90%);
 	--color-neutral-extra-dark-blue: hsl(229, 31%, 21%);
@@ -105,7 +106,7 @@ h2 {
 }
 
 .link-button-red {
-	background-color: var(--color-primary-soft-red);
+	background-color: var(--color-primary-dark-red);
 	color: var(--color-neutral-white);
 }
 
@@ -139,9 +140,9 @@ h2 {
 }
 
 .link-button-red:hover {
-	border: 3px solid var(--color-primary-soft-red);
+	border: 3px solid var(--color-primary-dark-red);
 	background-color: transparent;
-	color: var(--color-primary-soft-red);
+	color: var(--color-primary-dark-red);
 }
 
 .link-button-gray:hover {
@@ -151,8 +152,8 @@ h2 {
 }
 
 .link-button-login:hover {
-	border: 3px solid var(--color-primary-soft-red);
-	background-color: var(--color-primary-soft-red);
+	border: 3px solid var(--color-primary-dark-red);
+	background-color: var(--color-primary-dark-red);
 	color: var(--color-neutral-light-gray);
 }
 
@@ -258,7 +259,7 @@ h2 {
 }
 
 .nav-header-link:hover {
-	color: var(--color-primary-soft-red);
+	color: var(--color-primary-dark-red);
 }
 
 .header-logo-mobile .logo-fill-name,
@@ -385,7 +386,7 @@ h2 {
 
 .features-label:hover {
 	cursor: pointer;
-	color: var(--color-primary-soft-red);
+	color: var(--color-primary-dark-red);
 }
 
 .features-label::after {
@@ -395,7 +396,7 @@ h2 {
 	bottom: 0;
 	left: 50%;
 	width: 0;
-	border-bottom: 4px solid var(--color-primary-soft-red);
+	border-bottom: 4px solid var(--color-primary-dark-red);
 	transition: left 0.2s, width 0.2s;
 }
 
@@ -410,7 +411,7 @@ h2 {
 }
 
 .features-choice:checked + .features-label::after {
-	border-bottom: 4px solid var(--color-primary-soft-red);
+	border-bottom: 4px solid var(--color-primary-dark-red);
 	left: 5%;
 	width: 90%;
 }
@@ -538,7 +539,7 @@ h2 {
 }
 
 .faq-question:hover {
-	color: var(--color-primary-soft-red);
+	color: var(--color-primary-dark-red);
 }
 
 .faq-answer {
@@ -595,7 +596,7 @@ h2 {
 }
 
 .input-container {
-	background-color: var(--color-primary-soft-red);
+	background-color: var(--color-primary-dark-red);
 	border-radius: 6px;
 }
 
@@ -609,7 +610,7 @@ h2 {
 }
 
 .subscribe-email-error {
-	border: 3px solid var(--color-primary-soft-red);
+	border: 3px solid var(--color-primary-dark-red);
 	background: url(../images/icon-error.svg) right 0.5em center / 7% no-repeat var(--color-neutral-white);
 }
 
@@ -635,16 +636,16 @@ h2 {
 	padding: 0 1em;
 	border-radius: 6px;
 	border: 3px solid transparent;
-	background-color: var(--color-primary-soft-red);
+	background-color: var(--color-primary-dark-red);
 	color: var(--color-neutral-white);
 	transition: border 0.3s, color 0.3s, background-color 0.3s;
 	box-shadow: 0 5px 10px hsl(229, 31%, 21%, 10%);
 }
 
 .button-subscribe:hover {
-	border: 3px solid var(--color-primary-soft-red);
+	border: 3px solid var(--color-primary-dark-red);
 	background-color: var(--color-neutral-white);
-	color: var(--color-primary-soft-red);
+	color: var(--color-primary-dark-red);
 }
 
 /* Footer */
@@ -787,7 +788,7 @@ h2 {
 	}
 
 	.nav-header-link:hover {
-		color: var(--color-primary-soft-red);
+		color: var(--color-primary-dark-red);
 	}
 
 	.link-button-login {
@@ -796,7 +797,7 @@ h2 {
 	}
 
 	.link-button-login {
-		background-color: var(--color-primary-soft-red);
+		background-color: var(--color-primary-dark-red);
 		color: var(--color-neutral-light-gray);
 		font-size: 0.9rem;
 		letter-spacing: 0.2em;
@@ -807,8 +808,8 @@ h2 {
 
 	.link-button-login:hover {
 		background-color: transparent;
-		color: var(--color-primary-soft-red);
-		border: 3px solid var(--color-primary-soft-red);
+		color: var(--color-primary-dark-red);
+		border: 3px solid var(--color-primary-dark-red);
 	}
 
 	.nav-header .social-links {
@@ -899,7 +900,7 @@ h2 {
 	}
 
 	.features-choice:checked + .features-label::after {
-		border-bottom: 4px solid var(--color-primary-soft-red);
+		border-bottom: 4px solid var(--color-primary-dark-red);
 		left: 0;
 		width: 100%;
 	}
@@ -943,7 +944,7 @@ h2 {
 	}
 
 	.button-subscribe {
-		flex: 0 1 25%;
+		flex: 0 1 28%;
 	}
 
 	/* Footer */
