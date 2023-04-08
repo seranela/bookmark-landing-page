@@ -1,134 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Bookmark landing page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+	<meta charset="UTF-8">
+	<meta name="description" content="Frontend Mentor Challenge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/default.css">
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+	<title>Frontend Mentor | Bookmark landing page</title>
 </head>
+
 <body>
+	<header class="header">
+		<div class="header-container">
+			<!-- Logo -->
+			<svg class="header-logo" width="148" height="25" viewBox="0 0 148 25" xmlns="http://www.w3.org/2000/svg">
+				<title>Bookmark Logo</title>
+				<g fill="none" fill-rule="evenodd">
+					<path class="logo-fill-name" d="M37 6.299h5.227c.746 0 1.434.155 2.062.466.629.311 1.123.735 1.484 1.27s.542 1.12.542 1.754c0 .672-.165 1.254-.495 1.746-.33.491-.762.868-1.297 1.129v.15c.697.248 1.25.643 1.661 1.185.41.541.616 1.191.616 1.95 0 .735-.196 1.385-.588 1.951a3.817 3.817 0 0 1-1.587 1.307c-.665.305-1.403.457-2.212.457H37V6.299zm5.04 5.45c.548 0 .986-.152 1.316-.457.33-.305.495-.688.495-1.148 0-.448-.159-.824-.476-1.13-.318-.304-.738-.457-1.26-.457H39.52v3.192h2.52zm.28 5.619c.61 0 1.086-.159 1.428-.476.342-.317.513-.731.513-1.241 0-.51-.174-.927-.522-1.251-.349-.324-.847-.485-1.494-.485H39.52v3.453h2.8zm12.927 2.595c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.511-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.915-3.528a6.711 6.711 0 0 1 2.51-2.529C52.756 6.308 53.94 6 55.248 6c1.306 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.915 3.528a6.711 6.711 0 0 1-2.51 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.258-.578 4.177 4.177 0 0 0 1.615-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.615-1.624 4.52 4.52 0 0 0-2.258-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.605 1.624 4.47 4.47 0 0 0 2.25.578zm15.353 2.39c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.51-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.914-3.528a6.711 6.711 0 0 1 2.511-2.529C68.108 6.308 69.294 6 70.6 6c1.307 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.914 3.528a6.711 6.711 0 0 1-2.511 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.259-.578 4.177 4.177 0 0 0 1.614-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.614-1.624 4.52 4.52 0 0 0-2.259-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.606 1.624 4.47 4.47 0 0 0 2.249.578zM79.83 6.3h2.52v5.73h.15l4.89-5.73h3.043v.149L85.6 11.973l5.338 7.542v.149h-3.08l-3.994-5.693-1.512 1.773v3.92h-2.52V6.299zM93.779 6h3.248l3.546 9.39h.15L104.268 6h3.267v13.365h-2.501v-6.589l.15-2.221h-.15l-3.398 8.81h-1.96l-3.416-8.81h-.149l.15 2.221v6.59h-2.483V6zm20.8 0h2.894l5.021 13.365h-2.781l-1.12-3.192h-5.115l-1.12 3.192h-2.781L114.579 6zm3.193 7.859l-1.176-3.36-.486-1.606h-.149l-.485 1.606-1.195 3.36h3.49zM124.553 6h4.872c.871 0 1.646.18 2.324.541.678.361 1.204.862 1.577 1.503.374.64.56 1.366.56 2.175 0 .858-.27 1.62-.812 2.286a4.617 4.617 0 0 1-2.044 1.447l-.018.13 3.584 5.134v.15h-2.894l-3.453-5.022h-1.176v5.021h-2.52V6zm4.853 6.03c.573 0 1.04-.175 1.4-.523.361-.349.542-.79.542-1.326 0-.51-.172-.945-.514-1.306-.342-.361-.806-.542-1.39-.542h-2.371v3.696h2.333zm7.23-6.03h2.52v5.73h.15l4.89-5.73h3.043v.15l-4.835 5.525 5.34 7.541v.15h-3.08l-3.996-5.694-1.512 1.773v3.92h-2.52V6z" fill="#242A45" fill-rule="nonzero" />
+					<g>
+						<circle class="logo-fill-circle-icon" fill="#5267DF" cx="12.5" cy="12.5" r="12.5" />
+						<path class="logo-fill-bookmark-icon" d="M9 9v10l3.54-3.44L16.078 19V9a2 2 0 0 0-2-2H11a2 2 0 0 0-2 2z" fill="#FFF" />
+					</g>
+				</g>
+			</svg>
 
-  Features
-  Pricing
-  Contact
-  Login
+			<!-- Navigation -->
+			<button id="menu-toggle" class="nav-header-button" aria-label="Toggle Menu" aria-controls="nav-header">
+				<span class="sr-only">Toggle Menu</span>
+			</button>
+			<nav id="nav-header" class="nav-header nav-header-hidden" aria-labelledby="menu-toggle" aria-expanded="false">
+				<ul id="nav-header-list" class="nav-header-list">
+					<li><a href="#" class="nav-header-link">Features</a></li>
+					<li><a href="#" class="nav-header-link">Pricing</a></li>
+					<li><a href="#" class="nav-header-link">Contact</a></li>
+					<li><a href="#" class="link-button-login">Login</a></li>
+				</ul>
 
-  A Simple Bookmark Manager
+				<!-- Social Links -->
+				<section class="social-links" aria-label="Social Media Links">
+					<a href="#" class="social-link" aria-labelledby="social-icon-title-facebook">
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="social-icon">
+							<title>Share via Facebook</title>
+							<path fill="#FFFFFF" class="social-icon-path" d="M29 0h-26c-1.65 0-3 1.35-3 3v26c0 1.65 1.35 3 3 3h13v-14h-4v-4h4v-2c0-3.306 2.694-6 6-6h4v4h-4c-1.1 0-2 0.9-2 2v2h6l-1 4h-5v14h9c1.65 0 3-1.35 3-3v-26c0-1.65-1.35-3-3-3z"></path>
+						</svg>
+					</a>
+					<a href="#" class="social-link" aria-labelledby="social-icon-title-twitter">
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="social-icon">
+							<title>Share via Twitter</title>
+							<path fill="#FFFFFF" class="social-icon-path" d="M32 7.075c-1.175 0.525-2.444 0.875-3.769 1.031 1.356-0.813 2.394-2.1 2.887-3.631-1.269 0.75-2.675 1.3-4.169 1.594-1.2-1.275-2.906-2.069-4.794-2.069-3.625 0-6.563 2.938-6.563 6.563 0 0.512 0.056 1.012 0.169 1.494-5.456-0.275-10.294-2.888-13.531-6.862-0.563 0.969-0.887 2.1-0.887 3.3 0 2.275 1.156 4.287 2.919 5.463-1.075-0.031-2.087-0.331-2.975-0.819 0 0.025 0 0.056 0 0.081 0 3.181 2.263 5.838 5.269 6.437-0.55 0.15-1.131 0.231-1.731 0.231-0.425 0-0.831-0.044-1.237-0.119 0.838 2.606 3.263 4.506 6.131 4.563-2.25 1.762-5.075 2.813-8.156 2.813-0.531 0-1.050-0.031-1.569-0.094 2.913 1.869 6.362 2.95 10.069 2.95 12.075 0 18.681-10.006 18.681-18.681 0-0.287-0.006-0.569-0.019-0.85 1.281-0.919 2.394-2.075 3.275-3.394z"></path>
+						</svg>
+					</a>
+				</section>
+			</nav>
+		</div>
+	</header>
 
-  A clean and simple interface to organize your favourite websites. Open a new 
-  browser tab and see your sites load instantly. Try it for free.
+	<main>
+		<section class="intro">
+			<div class="intro-container">
+				<div class="intro-graphic">
+					<img src="images/illustration-hero.svg" alt="" width="657" height="466" class="intro-image">
+				</div>
+				<div class="intro-body">
+					<h1 class="intro-heading">A Simple Bookmark Manager</h1>
+					<p class="intro-paragraph">A clean and simple interface to organize your favourite websites. Open a new
+						browser tab and see your sites load instantly. Try it for free.</p>
+					<div class="link-button-group">
+						<a href="#" class="link-button-blue">Get it on Chrome</a>
+						<a href="#" class="link-button-gray">Get it on Firefox</a>
+					</div>
+				</div>
+			</div>
+		</section>
 
-  Get it on Chrome
-  Get it on Firefox
+		<section class="features">
+			<div class="features-container">
+				<div class="features-body">
+					<h2 class="features-heading">Features</h2>
+					<p class="features-paragraph">Our aim is to make it quick and easy for you to access your favourite websites.
+						Your bookmarks sync between your devices so you can access them on the go.</p>
+				</div>
 
-  Features
+				<fieldset class="features-choices">
+					<legend class="sr-only">Choose a feature</legend>
 
-  Our aim is to make it quick and easy for you to access your favourite websites. 
-  Your bookmarks sync between your devices so you can access them on the go.
+					<div class="features-choices-container">
+						<div class="features-choice-container">
+							<input type="radio" name="features" id="features-choice1" value="feature1" class="features-choice sr-only" checked>
+							<label for="features-choice1" class="features-label">Simple Bookmarking</label>
+						</div>
 
-  Simple Bookmarking
-  Speedy Searching
-  Easy Sharing
+						<div class="features-choice-container">
+							<input type="radio" name="features" id="features-choice2" value="feature2" class="features-choice sr-only">
+							<label for="features-choice2" class="features-label">Speedy Searching</label>
+						</div>
 
-  Bookmark in one click
+						<div class="features-choice-container">
+							<input type="radio" name="features" id="features-choice3" value="feature3" class="features-choice sr-only">
+							<label for="features-choice3" class="features-label">Easy Sharing</label>
+						</div>
+					</div>
+				</fieldset>
 
-  Organize your bookmarks however you like. Our simple drag-and-drop interface 
-  gives you complete control over how you manage your favourite sites.
+				<article id="feature1" class="feature">
+					<div class="feature-graphic">
+						<img src="images/illustration-features-tab-1.svg" alt="" width="536" height="346">
+					</div>
+					<div class="feature-body">
+						<h2 class="feature-heading">Bookmark in one click</h2>
+						<p class="feature-paragraph">Organize your bookmarks however you like. Our simple drag-and-drop interface
+							gives you complete control over how you manage your favourite sites.</p>
+						<a href="#" class="link-button-blue">More Info</a>
+					</div>
+				</article>
 
-  More Info
+				<article id="feature2" class="feature feature-hidden">
+					<div class="feature-graphic">
+						<img src="images/illustration-features-tab-2.svg" alt="" width="478" height="416">
+					</div>
+					<div class="feature-body">
+						<h2 class="feature-heading">Intelligent search</h2>
+						<p class="feature-paragraph">Our powerful search feature will help you find saved sites in no time at all.
+							No need to trawl through all of your bookmarks.</p>
+						<a href="#" class="link-button-blue">More Info</a>
+					</div>
+				</article>
 
-  Intelligent search
+				<article id="feature3" class="feature feature-hidden">
+					<div class="feature-graphic">
+						<img src="images/illustration-features-tab-3.svg" alt="" width="440" height="380">
+					</div>
+					<div class="feature-body">
+						<h2 class="feature-heading">Share your bookmarks</h2>
+						<p class="feature-paragraph">Easily share your bookmarks and collections with others. Create a shareable
+							link that you can send at the click of a button.</p>
+						<a href="#" class="link-button-blue">More Info</a>
+					</div>
+				</article>
+			</div>
+		</section>
 
-  Our powerful search feature will help you find saved sites in no time at all. 
-  No need to trawl through all of your bookmarks.
+		<section class="downloads">
+			<div class="downloads-container">
+				<div class="downloads-body">
+					<h2 class="downloads-heading">Download the extension</h2>
+					<p class="downloads-paragraph">We’ve got more browsers in the pipeline. Please do let us know if you’ve
+						got a favourite you’d like us to prioritize.</p>
+				</div>
 
-  More Info
+				<div class="cards">
+					<article id="card1" class="card">
+						<div class="card-top">
+							<img src="images/logo-chrome.svg" alt="" width="102" height="100" class="card-graphic">
+							<h3 class="card-heading">Add to Chrome</h3>
+							<p class="card-paragraph">Minimum version 62</p>
+						</div>
+						<div class="card-bottom">
+							<button class="link-button-blue link-button-extension">Add &amp; Install Extension</button>
+						</div>
+					</article>
 
-  Share your bookmarks
+					<article id="card2" class="card">
+						<div class="card-top">
+							<img src="images/logo-firefox.svg" alt="" width="105" height="100" class="card-graphic">
+							<h3 class="card-heading">Add to Firefox</h3>
+							<p class="card-paragraph">Minimum version 55</p>
+						</div>
+						<div class="card-bottom">
+							<button class="link-button-blue link-button-extension">Add &amp; Install Extension</button>
+						</div>
+					</article>
 
-  Easily share your bookmarks and collections with others. Create a shareable 
-  link that you can send at the click of a button.
+					<article id="card3" class="card">
+						<div class="card-top">
+							<img src="images/logo-opera.svg" alt="" width="96" height="100" class="card-graphic">
+							<h3 class="card-heading">Add to Opera</h3>
+							<p class="card-paragraph">Minimum version 46</p>
+						</div>
+						<div class="card-bottom">
+							<button class="link-button-blue link-button-extension">Add &amp; Install Extension</button>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
 
-  More Info
+		<section class="faq">
+			<div class="faq-container">
+				<div class="faq-body">
+					<h2 class="faq-heading">Frequently Asked Questions</h2>
+					<p class="faq-paragraph">Here are some of our FAQs. If you have any other questions you’d like
+						answered please feel free to email us.</p>
+				</div>
 
-  Download the extension
+				<div class="faq-list">
+					<details class="faq-item">
+						<summary class="faq-question">What is Bookmark?</summary>
+						<p class="faq-answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt
+							justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.</p>
+					</details>
+					<details class="faq-item">
+						<summary class="faq-question">How can I request a new browser?</summary>
+						<p class="faq-answer">Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula.
+							Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
+							ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies.
+							Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.</p>
+					</details>
+					<details class="faq-item">
+						<summary class="faq-question">Is there a mobile app?</summary>
+						<p class="faq-answer">Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum
+							urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed
+							sollicitudin ex et ultricies bibendum.</p>
+					</details>
+					<details class="faq-item">
+						<summary class="faq-question">What about other Chromium browsers?</summary>
+						<p class="faq-answer">Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam
+							vitae neque eget nisl gravida pellentesque non ut velit.</p>
+					</details>
+				</div>
 
-  We’ve got more browsers in the pipeline. Please do let us know if you’ve 
-  got a favourite you’d like us to prioritize.
+				<a href="#" class="link-button-blue">More Info</a>
+			</div>
+		</section>
 
-  Add to Chrome
-  Minimum version 62
-  Add & Install Extension
+		<section class="outro">
+			<div class="outro-container">
+				<div class="outro-body">
+					<h2 class="outro-heading">Stay up-to-date with what we’re doing</h2>
+					<p class="outro-paragraph">35,000+ already joined</p>
+				</div>
 
-  Add to Firefox
-  Minimum version 55
-  Add & Install Extension
+				<form action="#" method="post" class="form-subscribe">
+					<div class="input-container">
+						<input type="email" id="subscribe-email" class="subscribe-email" placeholder="Enter your email address" aria-errormessage="subscribe-email-error" required pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$">
+						<label for="subscribe-email" class="sr-only">Email</label>
+						<p id="subscribe-email-error" class="input-error-message">Whoops, make sure it's an email</p>
+					</div>
+					<button id="button-subscribe" class="button-subscribe">Contact Us</button>
+				</form>
+			</div>
+		</section>
+	</main>
 
-  Add to Opera
-  Minimum version 46
-  Add & Install Extension
+	<footer class="footer">
+		<div class="footer-container">
+			<!-- Logo -->
+			<svg width="148" height="25" viewBox="0 0 148 25" xmlns="http://www.w3.org/2000/svg">
+				<title>Bookmark Logo</title>
+				<g fill="none" fill-rule="evenodd">
+					<path d="M37 6.299h5.227c.746 0 1.434.155 2.062.466.629.311 1.123.735 1.484 1.27s.542 1.12.542 1.754c0 .672-.165 1.254-.495 1.746-.33.491-.762.868-1.297 1.129v.15c.697.248 1.25.643 1.661 1.185.41.541.616 1.191.616 1.95 0 .735-.196 1.385-.588 1.951a3.817 3.817 0 0 1-1.587 1.307c-.665.305-1.403.457-2.212.457H37V6.299zm5.04 5.45c.548 0 .986-.152 1.316-.457.33-.305.495-.688.495-1.148 0-.448-.159-.824-.476-1.13-.318-.304-.738-.457-1.26-.457H39.52v3.192h2.52zm.28 5.619c.61 0 1.086-.159 1.428-.476.342-.317.513-.731.513-1.241 0-.51-.174-.927-.522-1.251-.349-.324-.847-.485-1.494-.485H39.52v3.453h2.8zm12.927 2.595c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.511-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.915-3.528a6.711 6.711 0 0 1 2.51-2.529C52.756 6.308 53.94 6 55.248 6c1.306 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.915 3.528a6.711 6.711 0 0 1-2.51 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.258-.578 4.177 4.177 0 0 0 1.615-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.615-1.624 4.52 4.52 0 0 0-2.258-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.605 1.624 4.47 4.47 0 0 0 2.25.578zm15.353 2.39c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.51-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.914-3.528a6.711 6.711 0 0 1 2.511-2.529C68.108 6.308 69.294 6 70.6 6c1.307 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.914 3.528a6.711 6.711 0 0 1-2.511 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.259-.578 4.177 4.177 0 0 0 1.614-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.614-1.624 4.52 4.52 0 0 0-2.259-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.606 1.624 4.47 4.47 0 0 0 2.249.578zM79.83 6.3h2.52v5.73h.15l4.89-5.73h3.043v.149L85.6 11.973l5.338 7.542v.149h-3.08l-3.994-5.693-1.512 1.773v3.92h-2.52V6.299zM93.779 6h3.248l3.546 9.39h.15L104.268 6h3.267v13.365h-2.501v-6.589l.15-2.221h-.15l-3.398 8.81h-1.96l-3.416-8.81h-.149l.15 2.221v6.59h-2.483V6zm20.8 0h2.894l5.021 13.365h-2.781l-1.12-3.192h-5.115l-1.12 3.192h-2.781L114.579 6zm3.193 7.859l-1.176-3.36-.486-1.606h-.149l-.485 1.606-1.195 3.36h3.49zM124.553 6h4.872c.871 0 1.646.18 2.324.541.678.361 1.204.862 1.577 1.503.374.64.56 1.366.56 2.175 0 .858-.27 1.62-.812 2.286a4.617 4.617 0 0 1-2.044 1.447l-.018.13 3.584 5.134v.15h-2.894l-3.453-5.022h-1.176v5.021h-2.52V6zm4.853 6.03c.573 0 1.04-.175 1.4-.523.361-.349.542-.79.542-1.326 0-.51-.172-.945-.514-1.306-.342-.361-.806-.542-1.39-.542h-2.371v3.696h2.333zm7.23-6.03h2.52v5.73h.15l4.89-5.73h3.043v.15l-4.835 5.525 5.34 7.541v.15h-3.08l-3.996-5.694-1.512 1.773v3.92h-2.52V6z" fill="#FFFFFF" fill-rule="nonzero" />
+					<g>
+						<circle fill="#5267DF" cx="12.5" cy="12.5" r="12.5" />
+						<path d="M9 9v10l3.54-3.44L16.078 19V9a2 2 0 0 0-2-2H11a2 2 0 0 0-2 2z" fill="#FFF" />
+					</g>
+				</g>
+			</svg>
 
-  Frequently Asked Questions
-  
-  Here are some of our FAQs. If you have any other questions you’d like 
-  answered please feel free to email us.
+			<!-- Navigation -->
+			<nav id="nav-footer" class="nav-footer">
+				<ul id="nav-footer-list" class="nav-footer-list">
+					<li><a href="#" class="nav-footer-link">Features</a></li>
+					<li><a href="#" class="nav-footer-link">Pricing</a></li>
+					<li><a href="#" class="nav-footer-link">Contact</a></li>
+				</ul>
+			</nav>
 
-  <!-- Question 1 -->
-  What is Bookmark?
+			<!-- Social Links -->
+			<section class="social-links" aria-label="Social Media Links">
+				<a href="#" class="social-link" aria-labelledby="social-icon-title-facebook">
+					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="social-icon">
+						<title id="social-icon-title-facebook">Share via Facebook</title>
+						<path fill="#FFFFFF" class="social-icon-path" d="M29 0h-26c-1.65 0-3 1.35-3 3v26c0 1.65 1.35 3 3 3h13v-14h-4v-4h4v-2c0-3.306 2.694-6 6-6h4v4h-4c-1.1 0-2 0.9-2 2v2h6l-1 4h-5v14h9c1.65 0 3-1.35 3-3v-26c0-1.65-1.35-3-3-3z"></path>
+					</svg>
+				</a>
+				<a href="#" class="social-link" aria-labelledby="social-icon-title-twitter">
+					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="social-icon">
+						<title id="social-icon-title-twitter">Share via Twitter</title>
+						<path fill="#FFFFFF" class="social-icon-path" d="M32 7.075c-1.175 0.525-2.444 0.875-3.769 1.031 1.356-0.813 2.394-2.1 2.887-3.631-1.269 0.75-2.675 1.3-4.169 1.594-1.2-1.275-2.906-2.069-4.794-2.069-3.625 0-6.563 2.938-6.563 6.563 0 0.512 0.056 1.012 0.169 1.494-5.456-0.275-10.294-2.888-13.531-6.862-0.563 0.969-0.887 2.1-0.887 3.3 0 2.275 1.156 4.287 2.919 5.463-1.075-0.031-2.087-0.331-2.975-0.819 0 0.025 0 0.056 0 0.081 0 3.181 2.263 5.838 5.269 6.437-0.55 0.15-1.131 0.231-1.731 0.231-0.425 0-0.831-0.044-1.237-0.119 0.838 2.606 3.263 4.506 6.131 4.563-2.25 1.762-5.075 2.813-8.156 2.813-0.531 0-1.050-0.031-1.569-0.094 2.913 1.869 6.362 2.95 10.069 2.95 12.075 0 18.681-10.006 18.681-18.681 0-0.287-0.006-0.569-0.019-0.85 1.281-0.919 2.394-2.075 3.275-3.394z"></path>
+					</svg>
+				</a>
+			</section>
+		</div>
+	</footer>
 
-  <!-- Answer 1 -->
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt 
-  justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.
-
-  <!-- Question 2 -->
-  How can I request a new browser?
-
-  <!-- Answer 2 -->
-  Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. 
-  Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, 
-  ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. 
-  Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
-
-  <!-- Question 3 -->
-  Is there a mobile app?
-
-  <!-- Answer 3 -->
-  Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum 
-  urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed 
-  sollicitudin ex et ultricies bibendum.
-
-  <!-- Question 4 -->
-  What about other Chromium browsers?
-
-  <!-- Answer 4 -->
-  Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam 
-  vitae neque eget nisl gravida pellentesque non ut velit.
-
-  More Info
-
-  35,000+ already joined
-
-  Stay up-to-date with what we’re doing
-
-  Contact Us
-
-  Features
-  Pricing
-  Contact
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
+	<script src="js/default.js"></script>
 </body>
+
 </html>
